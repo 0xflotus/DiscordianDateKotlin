@@ -57,7 +57,7 @@ class DiscordianDate {
 
 	public fun getSeasonName(): String = _seasonNames[_season - 1]
 
-	override public fun toString() = "${getDayName()}, ${getSeasonName()} ${_seasonDay}, ${_year}";
+	override public fun toString(): String = "${getDayName()}, ${getSeasonName()} ${_seasonDay}, ${_year}";
 
 	companion object {
 		@JvmStatic public fun of(year: Int = LocalDate.now().year, month: Int = LocalDate.now().monthValue, dayOfMonth: Int = LocalDate.now().dayOfMonth): DiscordianDate = DiscordianDate(LocalDate.of(year, month, dayOfMonth))
